@@ -39,7 +39,7 @@ Things you may want to cover:
 |column|type|options|
 |------|----|-------|
 |text|string|null: false|
-|image|string|
+|image|string||
 |User_id|references|null: false, foreign_key: true|
 |Group_id|references|null: false, foreign_key: true|
 
