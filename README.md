@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## Usersテーブル
+## usersテーブル
 
 |column|type|options|
 |------|----|-------|
@@ -31,46 +31,46 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 |password|string|null: false|
 
-### Association
+### association
 
-- has_many :Gropus_Users
-- has_many :Groups, through: :Gropus_Users
+- has_many :gropus_users
+- has_many :groups, through: :gropus_users
 - has_many :Messages
 
-## Messagesテーブル
+## messagesテーブル
 
 |column|type|options|
 |------|----|-------|
 |text|string||
 |image|string||
-|User_id|references|null: false, foreign_key: true|
-|Group_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
-### Association
+### association
 
-- belongs_to :User
-- belongs_to :Group
+- belongs_to :user
+- belongs_to :group
 
-## Groupsテーブル
+## groupsテーブル
 
 |column|type|options|
 |------|----|-------|
 |name|string|null: false|
 
-### Association
+### association
 
-- has_many :Groups_Users
-- has_many :Users, through: :Groups_Users
-- has_many :Messages
+- has_many :groups_users
+- has_many :users, through: :groups_users
+- has_many :messages
 
-## Gropus_Usersテーブル
+## gropus_usersテーブル
 
 |column|type|options|
 |------|----|-------|
-|Group_id|integer|null: false, foreign_key: true|
-|User_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
-### Association
+### association
 
-- belongs_to :User
-- belongs_to :Group
+- belongs_to :user
+- belongs_to :group
